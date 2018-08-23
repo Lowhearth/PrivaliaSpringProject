@@ -24,5 +24,20 @@
 	<constructor-arg index="3" value="465324-R" type="java.lang.String" />
 </bean>
 
+<bean id="student" class="com.privalia.entity.Student">
+	<property name="idStudent" value="1"></property>
+	<property name="name" value="Pepe"></property>
+	<property name="surname" value="Soto"></property>
+	<property name="age" value="24"></property>
+	<property name="address">
+		<ref bean="address"/>
+	</property>
+</bean>
+
+<bean id="address" class="com.privalia.entity.Address">
+	<constructor-arg index="0" value="1" type="int"/>
+	<constructor-arg index="1" value="Calle San Juan" type="java.lang.String"/>
+</bean>
+
 
 </beans>
